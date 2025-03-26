@@ -1,0 +1,12 @@
+[Unit]
+Description=Kick Chromium Browser Flask Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/opt/kick_browser
+ExecStart=/opt/kick_browser/venv/bin/python /opt/kick_browser/kick_browser.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
